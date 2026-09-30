@@ -1,3 +1,4 @@
+mod game;
 use std::path::{Path,PathBuf};
 use clap::{Args,Parser,Subcommand};
 use narc_bench::runner::{self,Mode,Report};
@@ -21,6 +22,8 @@ enum Cmd {
     VerifyZeroCopy,
     /// Markdown tables from benchmark.json files.
     Report {files:Vec<PathBuf>},
+    /// Offline pipeline on game captures.
+    Game {#[command(subcommand)] cmd:game::GameCmd},
 }
 
 #[derive(Args,Clone)]
@@ -76,6 +79,7 @@ fn main()->anyhow::Result<()> {
         Cmd::Render{cfg,sequence,frame,out}=>render(&cfg,sequence,frame,&out),
         Cmd::VerifyZeroCopy=>verify_zero_copy(),
         Cmd::Report{files}=>report(&files),
+        Cmd::Game{cmd}=>game::run(cmd),
     }
 }
 

@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/narc-cli", "crates/narc-core", "crates/narc-gpu", "crates/narc-bench"]
+members = ["crates/narc-cli", "crates/narc-core", "crates/narc-gpu", "crates/narc-bench", "crates/narc-game"]
 
 [workspace.dependencies]
 cutile = "=0.3.1"

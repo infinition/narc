@@ -1,0 +1,14 @@
+[package]
+name = "narc-game"
+version = "0.1.0"
+edition = "2021"
+description = "Offline reconstruction of captured game frames: depth reprojection baseline and NARC cache"
+
+[dependencies]
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+image = { version = "0.25", default-features = false, features = ["png", "exr"] }
+
+[dev-dependencies]
+serde_json.workspace = true

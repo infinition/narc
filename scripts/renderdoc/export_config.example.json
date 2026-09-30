@@ -1,0 +1,15 @@
+{
+  "name": "oblivion-static-01",
+  "scene_class": "static-cacheable",
+  "frame_interval_s": 0.5,
+  "sky_ndc": 0.0,
+  "depth_resource_name": "TO_FILL_FROM_PROBE (e.g. SceneDepthZ)",
+  "camera": {
+    "stage": "Vertex",
+    "block": "TO_FILL_FROM_PROBE (e.g. View)",
+    "matrix": "TO_FILL_FROM_PROBE (e.g. View_TranslatedWorldToClip)",
+    "translation": ["TO_FILL_FROM_PROBE (e.g. View_RelativePreViewTranslation)"],
+    "translation_scale": {},
+    "row_vector": true
+  }
+}

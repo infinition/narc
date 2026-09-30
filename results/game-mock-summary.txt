@@ -1,0 +1,54 @@
+mock-static (mock) - LEVEL 2 +normals
+color          OK   49 frames, 640x360
+depth          OK   49/49 frames with depth.exr
+depth range    OK   NDC [0.004814, 0.035113], sky 41.2% (sky_ndc Some(0.0))
+camera         OK   49/49 frames with an invertible world_to_clip
+camera motion  OK   camera path length 8.5612 world units
+matrix         OK   pairwise reprojection over covered pixels (dB): [41.7, 41.5, 41.1, 41.2, 41.7]; needs coverage >= 50% and >= 20 dB
+frames         OK   49 frames (>= 16 recommended to keep unseen frames after baking)
+ready          YES
+mock-static (mock): 49 frames 640x360 ; LEVEL 2 +normals ; StaticCacheable ; cameras 49/49 ; sky 41.2% ; camera path 8.561 ; geometry usable: true ; camera check frame 0->1: PSNR 41.7 dB over 97.5% covered
+baked 7 keyframes (every 8) in 372 ms CPU: voxel 0.0241, normals in key true, 957800 entries, cache 29.2 MB vs keyframe store 12.3 MB
+NARC capture evaluation - mock-static - 640x360 - LEVEL 2 +normals - StaticCacheable
+keyframes 7 ([0, 8, 16, 24, 32, 40]...), unseen frames evaluated 42
+method               PSNR dB   worst dB    SSIM     RMSE  coverage   temporal    CPU ms  memory MB   baked dB
+reprojection           39.97      37.20  0.9903  0.01003     99.7%    0.01146      16.0       12.3      98.92
+narc-nearest           29.31      28.29  0.9309  0.03425     87.8%    0.03954      15.7       29.2      43.74
+narc-interpolated      35.98      35.09  0.9804  0.01588     97.0%    0.01878     137.3       29.2      41.31
+wrote out/game/mock-static/metrics.json, metrics.csv, summary.txt and frame_*/ images
+mock-lighting (mock) - LEVEL 2 +normals
+color          OK   49 frames, 640x360
+depth          OK   49/49 frames with depth.exr
+depth range    OK   NDC [0.004814, 0.035113], sky 41.2% (sky_ndc Some(0.0))
+camera         OK   49/49 frames with an invertible world_to_clip
+camera motion  OK   camera path length 8.5612 world units
+matrix         OK   pairwise reprojection over covered pixels (dB): [38.0, 37.4, 36.2, 35.2, 33.9]; needs coverage >= 50% and >= 20 dB
+frames         OK   49 frames (>= 16 recommended to keep unseen frames after baking)
+ready          YES
+mock-lighting (mock): 49 frames 640x360 ; LEVEL 2 +normals ; StaticCacheable ; cameras 49/49 ; sky 41.2% ; camera path 8.561 ; geometry usable: true ; camera check frame 0->1: PSNR 38.0 dB over 97.5% covered
+baked 7 keyframes (every 8) in 429 ms CPU: voxel 0.0241, normals in key true, 957800 entries, cache 29.2 MB vs keyframe store 12.3 MB
+NARC capture evaluation - mock-lighting - 640x360 - LEVEL 2 +normals - StaticCacheable
+keyframes 7 ([0, 8, 16, 24, 32, 40]...), unseen frames evaluated 42
+method               PSNR dB   worst dB    SSIM     RMSE  coverage   temporal    CPU ms  memory MB   baked dB
+reprojection           33.00      29.34  0.9723  0.02238     99.7%    0.01855      19.1       12.3      87.69
+narc-nearest           23.89      22.20  0.7603  0.06387     87.8%    0.06668      22.7       29.2      37.57
+narc-interpolated      26.81      23.92  0.9031  0.04564     97.0%    0.03148     296.5       29.2      28.01
+wrote out/game/mock-lighting/metrics.json, metrics.csv, summary.txt and frame_*/ images
+mock-dynamic (mock) - LEVEL 2 +normals
+color          OK   49 frames, 640x360
+depth          OK   49/49 frames with depth.exr
+depth range    OK   NDC [0.004814, 0.037660], sky 41.2% (sky_ndc Some(0.0))
+camera         OK   49/49 frames with an invertible world_to_clip
+camera motion  OK   camera path length 8.5612 world units
+matrix         OK   pairwise reprojection over covered pixels (dB): [33.0, 32.4, 34.1, 34.3, 33.3]; needs coverage >= 50% and >= 20 dB
+frames         OK   49 frames (>= 16 recommended to keep unseen frames after baking)
+ready          YES
+mock-dynamic (mock): 49 frames 640x360 ; LEVEL 2 +normals ; DynamicUnsafe ; cameras 49/49 ; sky 41.2% ; camera path 8.561 ; geometry usable: true ; camera check frame 0->1: PSNR 33.0 dB over 95.4% covered
+baked 7 keyframes (every 8) in 852 ms CPU: voxel 0.0234, normals in key true, 988277 entries, cache 30.2 MB vs keyframe store 12.3 MB
+NARC capture evaluation - mock-dynamic - 640x360 - LEVEL 2 +normals - DynamicUnsafe
+keyframes 7 ([0, 8, 16, 24, 32, 40]...), unseen frames evaluated 42
+method               PSNR dB   worst dB    SSIM     RMSE  coverage   temporal    CPU ms  memory MB   baked dB
+reprojection           28.58      25.35  0.9707  0.03725     98.4%    0.03064      21.9       12.3      87.49
+narc-nearest           24.72      22.99  0.8819  0.05805     85.2%    0.05808      22.1       30.2      41.45
+narc-interpolated      27.08      24.27  0.9525  0.04428     95.1%    0.03629     303.6       30.2      32.43
+wrote out/game/mock-dynamic/metrics.json, metrics.csv, summary.txt and frame_*/ images
