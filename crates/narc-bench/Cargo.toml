@@ -1,0 +1,14 @@
+[package]
+name = "narc-bench"
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+narc-core = { path = "../narc-core" }
+narc-gpu = { path = "../narc-gpu" }
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+cutile.workspace = true
+cuda-core.workspace = true
+csv = "1"
+libloading = "0.8"

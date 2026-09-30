@@ -1,0 +1,16 @@
+# Build
+/target
+
+# Run outputs (reference results live in results/)
+/out/
+/captures/
+*.narc
+*.nsys-rep
+*.sqlite
+
+# Local notes and tooling
+/.work/
+/BRIEF.md
+/DESIGN.md
+/PHASE8.md
+/CAPTURE_GUIDE.md

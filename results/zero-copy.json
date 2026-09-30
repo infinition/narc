@@ -1,0 +1,1 @@
+{"resolution":"1280x720","frames":64,"cuLaunchKernel":1520,"cuGraphLaunch":160,"htod_calls":0,"dtoh_calls":0,"memcpy_unspecified_calls":0,"dtod_calls":0,"memset_calls":0,"alloc_free_calls":0,"note":"GPU activity records unavailable (WSL2): verification at driver API level"}

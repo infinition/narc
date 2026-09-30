@@ -1,0 +1,4 @@
+[cache]
+position_grid = [32,32,32]
+view_bins = 32
+light_bins = 16

@@ -1,0 +1,195 @@
+
+NARC benchmark - RTX 4070 Ti - 1280x720 - Static - config default (grid 24x24x24, view 24, light 12)
+
+FULL
+median GPU:          15.686 ms
+p95 GPU:             15.993 ms
+equiv pipeline:        63.8 fps
+
+FULL_GRAPH
+median GPU:          15.673 ms
+p95 GPU:             15.970 ms
+equiv pipeline:        63.8 fps
+speedup vs FULL:       1.00x
+PSNR vs FULL:        identical
+worst frame PSNR:    identical
+MSE:                   0.000e0
+RMSE:                  0.00000
+max abs error:         0.00000
+graph == eager:           true
+
+CACHE_ONLY
+median GPU:           0.472 ms
+p95 GPU:              0.727 ms
+equiv pipeline:      2118.4 fps
+speedup vs FULL:      33.23x
+PSNR vs FULL:         33.15 dB
+worst frame PSNR:     33.15 dB
+MSE:                  4.844e-4
+RMSE:                  0.02201
+max abs error:         0.09063
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:      100.0 %
+cache VRAM:           364.5 MB
+
+CACHE_INTERP
+median GPU:           0.769 ms
+p95 GPU:              0.988 ms
+equiv pipeline:      1300.3 fps
+speedup vs FULL:      20.40x
+PSNR vs FULL:         48.22 dB
+worst frame PSNR:     48.22 dB
+MSE:                  1.505e-5
+RMSE:                  0.00388
+max abs error:         0.02920
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:      100.0 %
+cache VRAM:           364.5 MB
+
+CACHE_GRAPH
+median GPU:           0.461 ms
+p95 GPU:              0.708 ms
+equiv pipeline:      2170.1 fps
+speedup vs FULL:      34.04x
+PSNR vs FULL:         33.15 dB
+worst frame PSNR:     33.15 dB
+MSE:                  4.844e-4
+RMSE:                  0.02201
+max abs error:         0.09063
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:      100.0 %
+cache VRAM:           364.5 MB
+graph == eager:           true
+
+latency mode (host wait per frame, median): FULL 15.678 ms, FULL_GRAPH 15.663 ms, CACHE_ONLY 0.486 ms, CACHE_INTERP 0.771 ms, CACHE_GRAPH 0.470 ms
+allocated VRAM: 1.69 GB ; measured VRAM delta: 1.75 GB ; cold compile 7321 ms (22 JIT, 22 backend, 0 disk hits) ; bake 3469 ms
+
+NARC benchmark - RTX 4070 Ti - 1280x720 - Camera - config default (grid 24x24x24, view 24, light 12)
+
+FULL
+median GPU:          15.731 ms
+p95 GPU:             16.017 ms
+equiv pipeline:        63.6 fps
+
+FULL_GRAPH
+median GPU:          15.728 ms
+p95 GPU:             16.006 ms
+equiv pipeline:        63.6 fps
+speedup vs FULL:       1.00x
+PSNR vs FULL:        identical
+worst frame PSNR:    identical
+MSE:                   0.000e0
+RMSE:                  0.00000
+max abs error:         0.00000
+graph == eager:           true
+
+CACHE_ONLY
+median GPU:           0.472 ms
+p95 GPU:              0.708 ms
+equiv pipeline:      2118.4 fps
+speedup vs FULL:      33.32x
+PSNR vs FULL:         31.62 dB
+worst frame PSNR:     27.68 dB
+MSE:                  6.892e-4
+RMSE:                  0.02625
+max abs error:         0.16114
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.2 %
+cache VRAM:           364.5 MB
+
+CACHE_INTERP
+median GPU:           0.761 ms
+p95 GPU:              0.993 ms
+equiv pipeline:      1314.4 fps
+speedup vs FULL:      20.68x
+PSNR vs FULL:         46.35 dB
+worst frame PSNR:     44.11 dB
+MSE:                  2.319e-5
+RMSE:                  0.00482
+max abs error:         0.03745
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.2 %
+cache VRAM:           364.5 MB
+
+CACHE_GRAPH
+median GPU:           0.462 ms
+p95 GPU:              0.703 ms
+equiv pipeline:      2165.3 fps
+speedup vs FULL:      34.06x
+PSNR vs FULL:         31.62 dB
+worst frame PSNR:     27.68 dB
+MSE:                  6.892e-4
+RMSE:                  0.02625
+max abs error:         0.16114
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.2 %
+cache VRAM:           364.5 MB
+graph == eager:           true
+
+latency mode (host wait per frame, median): FULL 15.715 ms, FULL_GRAPH 15.706 ms, CACHE_ONLY 0.479 ms, CACHE_INTERP 0.762 ms, CACHE_GRAPH 0.471 ms
+allocated VRAM: 1.69 GB ; measured VRAM delta: 1.75 GB ; cold compile 7321 ms (22 JIT, 22 backend, 0 disk hits) ; bake 3469 ms
+
+NARC benchmark - RTX 4070 Ti - 1280x720 - CameraLight - config default (grid 24x24x24, view 24, light 12)
+
+FULL
+median GPU:          15.771 ms
+p95 GPU:             16.063 ms
+equiv pipeline:        63.4 fps
+
+FULL_GRAPH
+median GPU:          15.763 ms
+p95 GPU:             16.031 ms
+equiv pipeline:        63.4 fps
+speedup vs FULL:       1.00x
+PSNR vs FULL:        identical
+worst frame PSNR:    identical
+MSE:                   0.000e0
+RMSE:                  0.00000
+max abs error:         0.00000
+graph == eager:           true
+
+CACHE_ONLY
+median GPU:           0.472 ms
+p95 GPU:              0.707 ms
+equiv pipeline:      2118.4 fps
+speedup vs FULL:      33.41x
+PSNR vs FULL:         35.84 dB
+worst frame PSNR:     30.95 dB
+MSE:                  2.604e-4
+RMSE:                  0.01614
+max abs error:         0.13237
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       94.8 %
+cache VRAM:           364.5 MB
+
+CACHE_INTERP
+median GPU:           0.756 ms
+p95 GPU:              0.994 ms
+equiv pipeline:      1323.3 fps
+speedup vs FULL:      20.87x
+PSNR vs FULL:         48.67 dB
+worst frame PSNR:     44.88 dB
+MSE:                  1.358e-5
+RMSE:                  0.00369
+max abs error:         0.04404
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       94.8 %
+cache VRAM:           364.5 MB
+
+CACHE_GRAPH
+median GPU:           0.462 ms
+p95 GPU:              0.710 ms
+equiv pipeline:      2165.3 fps
+speedup vs FULL:      34.15x
+PSNR vs FULL:         35.84 dB
+worst frame PSNR:     30.95 dB
+MSE:                  2.604e-4
+RMSE:                  0.01614
+max abs error:         0.13237
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       94.8 %
+cache VRAM:           364.5 MB
+graph == eager:           true
+
+latency mode (host wait per frame, median): FULL 15.741 ms, FULL_GRAPH 15.747 ms, CACHE_ONLY 0.496 ms, CACHE_INTERP 0.761 ms, CACHE_GRAPH 0.471 ms
+allocated VRAM: 1.69 GB ; measured VRAM delta: 1.75 GB ; cold compile 7321 ms (22 JIT, 22 backend, 0 disk hits) ; bake 3469 ms

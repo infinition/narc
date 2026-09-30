@@ -1,0 +1,76 @@
+
+NARC benchmark - RTX 4070 Ti - 1920x1080 - Camera - config default (grid 24x24x24, view 24, light 12)
+
+FULL
+median GPU:          36.057 ms
+p95 GPU:             36.657 ms
+equiv pipeline:        27.7 fps
+
+CACHE_ONLY
+median GPU:           1.056 ms
+p95 GPU:              1.357 ms
+equiv pipeline:       947.2 fps
+speedup vs FULL:      34.15x
+PSNR vs FULL:         30.91 dB
+worst frame PSNR:     27.68 dB
+MSE:                  8.101e-4
+RMSE:                  0.02846
+max abs error:         0.16034
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.3 %
+cache VRAM:           364.5 MB
+
+CACHE_INTERP
+median GPU:           1.797 ms
+p95 GPU:              2.056 ms
+equiv pipeline:       556.6 fps
+speedup vs FULL:      20.07x
+PSNR vs FULL:         46.16 dB
+worst frame PSNR:     44.10 dB
+MSE:                  2.419e-5
+RMSE:                  0.00492
+max abs error:         0.03698
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.3 %
+cache VRAM:           364.5 MB
+
+latency mode (host wait per frame, median): FULL 35.932 ms, CACHE_ONLY 1.078 ms, CACHE_INTERP 1.783 ms
+measured VRAM: 3.44 GB ; cold compile 7097 ms (22 JIT, 22 backend, 0 disk hits) ; bake 3604 ms
+
+NARC benchmark - RTX 4070 Ti - 1920x1080 - CameraLight - config default (grid 24x24x24, view 24, light 12)
+
+FULL
+median GPU:          36.341 ms
+p95 GPU:             36.699 ms
+equiv pipeline:        27.5 fps
+
+CACHE_ONLY
+median GPU:           1.056 ms
+p95 GPU:              1.360 ms
+equiv pipeline:       946.7 fps
+speedup vs FULL:      34.41x
+PSNR vs FULL:         35.99 dB
+worst frame PSNR:     30.95 dB
+MSE:                  2.516e-4
+RMSE:                  0.01586
+max abs error:         0.13813
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.0 %
+cache VRAM:           364.5 MB
+
+CACHE_INTERP
+median GPU:           1.794 ms
+p95 GPU:              2.051 ms
+equiv pipeline:       557.4 fps
+speedup vs FULL:      20.26x
+PSNR vs FULL:         48.59 dB
+worst frame PSNR:     44.88 dB
+MSE:                  1.383e-5
+RMSE:                  0.00372
+max abs error:         0.04454
+cache hit:            100.0 %  (valid namespace, not a quality measure)
+key reuse f/f-1:       95.0 %
+cache VRAM:           364.5 MB
+
+latency mode (host wait per frame, median): FULL 36.035 ms, CACHE_ONLY 1.080 ms, CACHE_INTERP 1.805 ms
+measured VRAM: 3.44 GB ; cold compile 7097 ms (22 JIT, 22 backend, 0 disk hits) ; bake 3604 ms

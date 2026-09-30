@@ -1,0 +1,20 @@
+[render]
+width = 1920
+height = 1080
+frames = 500
+sequence = "camera"
+[teacher]
+hidden = [128,128,128,64]
+dtype = "f32"
+seed = 1337
+[cache]
+position_grid = [24,24,24]
+view_bins = 24
+light_bins = 12
+dtype = "f32"
+interpolation = "nearest"
+[benchmark]
+warmup_frames = 50
+measured_frames = 500
+cuda_graph = true
+max_vram_gib = 10.0

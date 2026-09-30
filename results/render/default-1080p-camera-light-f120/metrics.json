@@ -1,0 +1,30 @@
+{
+  "cache": {
+    "dtype": "f32",
+    "interpolation": "nearest",
+    "light_bins": 12,
+    "position_grid": [
+      24,
+      24,
+      24
+    ],
+    "view_bins": 24
+  },
+  "cache_interp_vs_full": {
+    "max_abs_error": 0.028179407119750977,
+    "mse": 0.000010778616537872221,
+    "psnr_db": 49.67436978344584,
+    "rmse": 0.0032830803428902286
+  },
+  "cache_nearest_vs_full": {
+    "max_abs_error": 0.13657355308532715,
+    "mse": 0.0005446998860187152,
+    "psnr_db": 32.63842715605238,
+    "rmse": 0.023338806439462904
+  },
+  "frame": 120,
+  "heatmap": "max abs RGB error per pixel, black=0, red=scale/3, yellow=2*scale/3, white>=scale",
+  "heatmap_scale": 0.10000000149011612,
+  "resolution": "1920x1080",
+  "sequence": "camera_light"
+}

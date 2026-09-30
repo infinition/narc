@@ -1,0 +1,20 @@
+FULL teacher output-tile sweep, RTX 4070 Ti, 1920x1080, sequence camera, 30 pipelined frames, configs/speed.toml
+Command per tile: NARC_TEACHER_TILE=<BMxBN> narc bench --configs configs/speed.toml --resolution 1920x1080 --sequence camera --modes full --frames 30 --latency-frames 1 --warmup 3
+Every tile also passed examples/full_validate (GPU vs independent FP32 CPU reference, max abs error < 2e-4, repeat equality).
+BN is capped by the layer width (128,128,128,64,32). K step is 32.
+
+tile     median FULL GPU ms
+32x32    79.094   (initial kernel)
+64x16    84.295
+64x32    47.214
+64x64    50.424
+128x32   56.664
+128x64   66.787
+64x128   64.831
+128x128  156.233
+256x64   177.483
+32x64    46.570
+32x128   39.792 / 39.795
+16x64    46.784
+16x128   36.467 / 36.374
+8x128    35.241   <- default (DEFAULT_TEACHER_TILE)

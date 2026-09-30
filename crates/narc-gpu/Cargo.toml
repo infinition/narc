@@ -1,0 +1,9 @@
+[package]
+name = "narc-gpu"
+version = "0.1.0"
+edition = "2021"
+[dependencies]
+cutile.workspace = true
+cuda-core.workspace = true
+anyhow.workspace = true
+narc-core = { path = "../narc-core" }
