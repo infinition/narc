@@ -2,10 +2,14 @@
 
 **[infinition.github.io/narc](https://infinition.github.io/narc/)**
 
-NARC (Neural Adaptive Rendering Cache) measures whether an expensive per-frame
-neural appearance pass can be replaced by a persistent, GPU-resident cache
-baked from the same network. It is a Rust and cuTile benchmark, not a renderer
-and not related to NVIDIA DLSS.
+NARC (Neural Adaptive Rendering Cache) tests whether neural rendering can be
+baked instead of run every frame. Passes such as NVIDIA DLSS 5 evaluate a large
+network per pixel and per frame; NARC evaluates its network once, stores the
+result in a GPU-resident cache and replaces per-frame inference with a lookup.
+
+The proof of concept uses its own network so the full pass and the cache can be
+compared exactly. It does not use or modify DLSS and is not affiliated with
+NVIDIA.
 
 ## At a glance
 

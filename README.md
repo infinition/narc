@@ -4,7 +4,7 @@
 
 <h1 align="center">NARC</h1>
 
-<p align="center">Neural Adaptive Rendering Cache: a GPU-resident appearance cache benchmarked against full neural inference.</p>
+<p align="center">Bake neural rendering instead of running it every frame: a GPU-resident cache that replaces per-frame neural inference, 20x to 34x faster.</p>
 
 <p align="center"><a href="https://infinition.github.io/narc/"><strong>Documentation</strong></a></p>
 
@@ -16,17 +16,34 @@
   <img src="https://img.shields.io/badge/platform-linux%20%7C%20wsl2-lightgrey" alt="Platform: Linux, WSL2">
 </p>
 
+## Highlights
+
+Measured on an RTX 4070 Ti at 2560x1440, 500 frames with moving camera and light:
+
+| | Full neural pass | Baked cache, multilinear | Baked cache, nearest |
+|---|---:|---:|---:|
+| GPU time per frame | 65.7 ms | **3.3 ms** | **1.9 ms** |
+| Speedup | 1x | **19.9x** | **34.0x** |
+| Pipeline rate | 15 fps | 303 fps | 518 fps |
+| Quality vs full pass | reference | **48.7 dB PSNR** | 35.8 dB PSNR |
+| CPU-GPU copies per frame | 0 | 0 | 0 |
+
 ## Overview
 
-NARC tests one hypothesis: a neural appearance pass that is expensive to run every
-frame can be replaced by a cache baked from the same network, kept in VRAM, and
-read with a cheap lookup.
+Neural rendering passes such as NVIDIA DLSS 5 run a large network on every frame,
+which puts a hard real-time cost on each pixel. NARC (Neural Adaptive Rendering
+Cache) tests the alternative: evaluate the network once, offline, over the states
+a scene can take; keep the result in VRAM; and replace per-frame inference with a
+cache lookup.
 
-The workload is synthetic and deterministic, so the full network and the cache
-are compared sample by sample on the same frames. Everything runs on the GPU in
-Rust with [cuTile](https://github.com/NVlabs/cutile-rs), timed with CUDA events,
-with no host transfer in the measured loop. NARC is a research benchmark, not a
-renderer, and is unrelated to NVIDIA DLSS.
+This proof of concept uses its own network, a 17 -> 128 -> 128 -> 128 -> 64 -> 3
+MLP, so the full pass and the cache can be compared exactly, sample by sample, on
+the same frames. It validates the mechanism and measures the speed, quality and
+memory trade-off. It does not use, modify or accelerate DLSS, and is not
+affiliated with NVIDIA.
+
+Everything runs on the GPU in Rust with [cuTile](https://github.com/NVlabs/cutile-rs),
+timed with CUDA events, with no host transfer in the measured loop.
 
 ## Results
 
